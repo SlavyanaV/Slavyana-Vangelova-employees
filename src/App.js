@@ -2,6 +2,8 @@ import { Layout } from 'antd';
 import { HeaderTitle } from './components/HeaderTitle/HeaderTitle';
 import { ContentContainer } from './components/ContentContainer/ContentContainer';
 import './components/HeaderTitle/headerTitle.css';
+import './components/ContentContainer/contentContainer.css';
+import './components/ContentContainer/EmployeeTable/employeeTable.css';
 
 const { Header, Content } = Layout;
 

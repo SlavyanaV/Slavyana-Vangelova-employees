@@ -1,0 +1,21 @@
+.ant-upload-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.anticon-paper-clip,
+.ant-upload-list-item-name,
+.anticon-delete {
+  color: #f5f5f5 !important;
+}
+
+.ant-btn {
+  background-color: #001529;
+  color: #f5f5f5;
+}
+
+.ant-btn:hover {
+  color: #509f9f !important;
+  border-color: #509f9f !important;
+}

@@ -28,6 +28,11 @@ export const ContentContainer = () => {
 
       let hasError = false;
 
+      if (!rowsData.length) {
+        setError('Empty file');
+        hasError = true;
+      }
+
       rowsData.forEach((row) => {
         const isRowInvalid =
           isNaN(+row[0]) ||
@@ -35,7 +40,9 @@ export const ContentContainer = () => {
           !dayjs(row[2]).isValid() ||
           (!dayjs(row[3]).isValid() && row[3] !== 'NULL');
 
-        if (isRowInvalid) {
+        const hasEmptyRow = !row[0] || !row[1] || !row[2];
+
+        if (isRowInvalid || hasEmptyRow) {
           setError('File contains unsupported cells');
           hasError = true;
         }

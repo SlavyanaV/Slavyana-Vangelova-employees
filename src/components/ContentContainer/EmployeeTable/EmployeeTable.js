@@ -23,16 +23,13 @@ const columns = [
   },
 ];
 
-const data = [
-  {
-    key: '1',
-    firstEmployeeId: 218,
-    secondEmployeeId: 143,
-    projectId: 10,
-    daysWorked: 8,
-  },
-];
-
-export const EmployeeTable = () => {
-  return <Table columns={columns} dataSource={data} pagination={false} />;
+export const EmployeeTable = ({ rows }) => {
+  return (
+    <Table
+      columns={columns}
+      dataSource={rows}
+      pagination={false}
+      rowKey={'id'}
+    />
+  );
 };
